@@ -1,5 +1,18 @@
-.button {
-  background-color: darkorchid;
-  color: white;
-  padding: 5px;
+#button {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #4e1414d7;
+  height: 40px;
+  width: 190px;
+  margin-top: 30px;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: 1px;
+}
+#button span {
+  background-color: rgb(254, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 3px 10px;
+
+  border-radius: 12px;
 }
