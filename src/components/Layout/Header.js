@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Ui/Button/Button";
 import "./Header.css";
 import mealsimage from "../../assets/meals.jpg";
+import Mealslist from "../Ui/Button/Meals/Mealslist";
 const Header = () => {
   return (
     <React.Fragment>
@@ -21,6 +22,7 @@ const Header = () => {
           and of course by experienced chefs!
         </p>
       </div>
+      <Mealslist></Mealslist>
     </React.Fragment>
   );
 };
