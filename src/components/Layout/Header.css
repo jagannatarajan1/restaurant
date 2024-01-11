@@ -1,0 +1,20 @@
+.Headerdiv {
+  background-color: #d80505;
+  display: flex;
+  justify-content: space-between;
+}
+.Headerdiv h1 {
+  color: white;
+  padding: 10px 20px 0px 100px;
+}
+.Headerdiv Button {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #4e1414d7;
+  height: 40px;
+  width: 190px;
+  margin-top: 30px;
+  margin-right: 20px;
+  border-radius: 20px;
+  border: 1px;
+}
