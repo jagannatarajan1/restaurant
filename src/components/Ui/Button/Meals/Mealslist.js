@@ -1,6 +1,7 @@
 import React from "react";
 import "./Mealslist.css";
 import Card from "../../../Layout/Card";
+import FormForMealList from "./FormForMealList/FormForMealList";
 const Mealslist = (props) => {
   const Dummydata = [
     {
@@ -29,10 +30,11 @@ const Mealslist = (props) => {
     },
   ];
   let MealsItems = Dummydata.map((item) => (
-    <ul className="meal">
+    <ul className="meal" key={item.Id}>
       <h3>{item.Name}</h3>
       <h4 className="description">{item.Description}</h4>
       <h3 className="price">{item.Price}</h3>
+      <FormForMealList></FormForMealList>
     </ul>
   ));
 

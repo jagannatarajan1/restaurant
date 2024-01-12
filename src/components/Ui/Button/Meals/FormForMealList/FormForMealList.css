@@ -1,0 +1,59 @@
+.full {
+  display: flex;
+  justify-content: flex-end;
+}
+.full button {
+  margin-top: 5px;
+  width: 100px;
+  padding: 5px;
+  padding-right: 30px;
+}
+.Form input {
+  margin-left: 10px;
+  height: 25px;
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding-left: 0.5rem;
+}
+.Form label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.Form {
+  margin-left: 30px;
+  margin-top: -70px;
+}
+
+.full button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.full button:hover,
+.full button:active {
+  background-color: #641e03;
+  border-color: #641e03;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.input input {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding-left: 0.5rem;
+}
