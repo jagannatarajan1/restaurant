@@ -11,14 +11,16 @@ const Cart = (props) => {
   );
   return (
     <React.Fragment>
-      <Modal>
+      <Modal yourcartclose={props.yourcartclose}>
         {cartItems}
         <div className="total">
           <span>Total Amount</span>
           <span>55</span>
         </div>
         <div className="actions ">
-          <button className="button--alt ">Close</button>
+          <button className="button--alt " onClick={props.yourcartclose}>
+            Close
+          </button>
           <button className="button">Order</button>
         </div>
       </Modal>

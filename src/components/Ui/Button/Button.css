@@ -8,6 +8,7 @@
   margin-right: 20px;
   border-radius: 20px;
   border: 1px;
+  cursor: pointer;
 }
 #button span {
   background-color: rgb(254, 0, 0);
