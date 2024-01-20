@@ -2,6 +2,7 @@ import React from "react";
 import "./Mealslist.css";
 import Card from "../../../Layout/Card";
 import FormForMealList from "./FormForMealList/FormForMealList";
+
 const Mealslist = (props) => {
   const Dummydata = [
     {
@@ -29,12 +30,13 @@ const Mealslist = (props) => {
       Price: "20 rs",
     },
   ];
+
   let MealsItems = Dummydata.map((item) => (
     <ul className="meal" key={item.Id}>
       <h3>{item.Name}</h3>
       <h4 className="description">{item.Description}</h4>
       <h3 className="price">{item.Price}</h3>
-      <FormForMealList></FormForMealList>
+      <FormForMealList data={item}></FormForMealList>
     </ul>
   ));
 
@@ -44,4 +46,5 @@ const Mealslist = (props) => {
     </React.Fragment>
   );
 };
+
 export default Mealslist;

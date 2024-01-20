@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./FormForMealList.css";
+import CartContext from "../../../../../store/cart-context";
+
 const FormForMealList = (props) => {
+  const cartcontext = useContext(CartContext);
+
+  const Addlistitems = (event) => {
+    event.preventDefault();
+    const quantity = event.target.form.Amount.value;
+    cartcontext.addItem({ ...props.data, quantity: quantity });
+  };
+
   return (
     <React.Fragment>
       <div className="full">
@@ -15,10 +25,13 @@ const FormForMealList = (props) => {
             step="1"
             defaultValue="1"
           />
+          <button type="button" onClick={Addlistitems}>
+            +Add
+          </button>
         </form>
-        <button type="button">+Add</button>
       </div>
     </React.Fragment>
   );
 };
+
 export default FormForMealList;

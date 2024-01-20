@@ -1,29 +1,36 @@
 .full {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
+
 .full button {
   margin-top: 5px;
+  margin-left: 10px;
   width: 100px;
   padding: 5px;
-  padding-right: 30px;
+  display: flex;
+  align-items: center;
 }
+
+.Form {
+  display: flex;
+  align-items: center;
+}
+
 .Form input {
-  margin-left: 10px;
   height: 25px;
   width: 3rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font: inherit;
   padding-left: 0.5rem;
+  margin-right: 10px; /* Added margin to create space between input and button */
 }
+
 .Form label {
   font-weight: bold;
   margin-right: 1rem;
-}
-.Form {
-  margin-left: 30px;
-  margin-top: -70px;
 }
 
 .full button {
@@ -32,10 +39,9 @@
   background-color: #8a2b06;
   border: 1px solid #8a2b06;
   color: white;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 1rem;
   border-radius: 20px;
   font-weight: bold;
-  margin-right: 40px;
 }
 
 .full button:hover,
