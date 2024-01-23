@@ -1,42 +1,55 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Mealslist.css";
 import Card from "../../../Layout/Card";
+import CartContext from "../../../../store/cart-context";
 import FormForMealList from "./FormForMealList/FormForMealList";
 
 const Mealslist = (props) => {
+  const cartCtx = useContext(CartContext);
   const Dummydata = [
     {
-      Id: "1",
-      Name: "Dosa",
-      Description: "This is the best dosa in the entire country",
-      Price: "45 rs",
+      id: "1",
+      name: "Dosa",
+      description: "This is the best dosa in the entire country",
+      price: "45",
     },
     {
-      Id: "2",
-      Name: "Idli",
-      Description: "This is the best Idli in the entire country",
-      Price: "15 rs",
+      id: "2",
+      name: "Idli",
+      description: "This is the best Idli in the entire country",
+      price: "15",
     },
     {
-      Id: "3",
-      Name: "Vada",
-      Description: "This is the best Vada in the entire country",
-      Price: "10 rs",
+      id: "3",
+      name: "Vada",
+      description: "This is the best Vada in the entire country",
+      price: "10",
     },
     {
-      Id: "4",
-      Name: "Sambar",
-      Description: "This is the best Sambar in the entire country",
-      Price: "20 rs",
+      id: "4",
+      name: "Sambar",
+      description: "This is the best Sambar in the entire country",
+      price: "20",
     },
   ];
+  const quantityHandler = (amount, item) => {
+    cartCtx.addItem({
+      id: item.id,
+      name: item.name,
+      amount: amount,
+      price: item.price,
+    });
+  };
 
   let MealsItems = Dummydata.map((item) => (
-    <ul className="meal" key={item.Id}>
-      <h3>{item.Name}</h3>
-      <h4 className="description">{item.Description}</h4>
-      <h3 className="price">{item.Price}</h3>
-      <FormForMealList data={item}></FormForMealList>
+    <ul className="meal" key={item.id}>
+      <h3>{item.name}</h3>
+      <h4 className="description">{item.description}</h4>
+      <h3 className="price">{item.price} rs</h3>
+      <FormForMealList
+        data={item}
+        onAddToCart={(amount) => quantityHandler(amount, item)}
+      ></FormForMealList>
     </ul>
   ));
 

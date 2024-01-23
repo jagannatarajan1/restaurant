@@ -4,17 +4,17 @@ import "./Button.css";
 import CartContext from "../../../store/cart-context";
 
 const Button = (props) => {
-  const cartcontext = useContext(CartContext);
-  let quantity = 0;
+  const cartCtx = useContext(CartContext);
 
-  cartcontext.items.forEach((item) => {
-    quantity = quantity + Number(item.quantity);
-  });
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
+  console.log(cartCtx);
   return (
     <button id="button" type="button" onClick={props.onClick}>
       <Carticon />
       {props.children}
-      <span>{quantity}</span>
+      <span>{numberOfCartItems}</span>
     </button>
   );
 };
