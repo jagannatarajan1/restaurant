@@ -36,7 +36,7 @@ const Mealslist = (props) => {
     cartCtx.addItem({
       id: item.id,
       name: item.name,
-      amount: amount,
+      amount: amnpount,
       price: item.price,
     });
   };
